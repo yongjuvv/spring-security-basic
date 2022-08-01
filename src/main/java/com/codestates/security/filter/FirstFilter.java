@@ -8,20 +8,20 @@ public class FirstFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         Filter.super.init(filterConfig);
-        System.out.println("FirstFilter 생성됨");
+//        System.out.println("FirstFilter 생성됨");
     }
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 
-        System.out.println("========First 필터 시작========");
+//        System.out.println("========First 필터 시작========");
         chain.doFilter(request, response);
-        System.out.println("========First 필터 종료========");
+//        System.out.println("========First 필터 종료========");
     }
 
     @Override
     public void destroy() {
-        System.out.println("FirstFilter 사라짐");
+//        System.out.println("FirstFilter 사라짐");
         Filter.super.destroy();
     }
 }
